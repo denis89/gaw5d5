@@ -6,7 +6,7 @@ class TechnicianController < ApplicationController
 
   def index
     @technicians = Technician.all
-    redirect to '/'
+    
   end
 
    def new
