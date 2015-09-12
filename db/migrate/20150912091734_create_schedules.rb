@@ -3,6 +3,8 @@ class CreateSchedules < ActiveRecord::Migration
     create_table :schedules do |t|
       t.string :date
 
+      
+
       t.timestamps null: false
     end
   end
