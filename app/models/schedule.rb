@@ -1,4 +1,5 @@
 class Schedule < ActiveRecord::Base
-   belongs_to :hotel 
-  belongs_to :guest
+
+  belongs_to :customer
+  belongs_to :technician
 end
