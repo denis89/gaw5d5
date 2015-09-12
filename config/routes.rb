@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-
+  root 'schedule#index'
   resources :schedule
   resources :technician
   resources :customer

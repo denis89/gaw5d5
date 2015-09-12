@@ -1,10 +1,12 @@
 class TechnicianController < ApplicationController
   
   def home
+    
   end
 
   def index
-    @technicians = technician.all
+    @technicians = Technician.all
+    redirect to '/'
   end
 
    def new
@@ -12,11 +14,11 @@ class TechnicianController < ApplicationController
   end
 
    def create
-    technician =technician.create(params.require(:name)
-    if article.save
+    technician =technician.create(params.require(:name))
+    if technician.save
       flash[:notice] = "Article created successfully"
       redirect_to technician
-    else
+    elsif
       flash[:error] = "#{technician.errors}"
       redirect to "/technician/#{technician[:id]}"
     else
@@ -36,10 +38,7 @@ class TechnicianController < ApplicationController
    def update
     # update is similar to create
     technician = technician.find(params[:id])
-    
-    if 
-    else
-    end
+  
   
   end
 

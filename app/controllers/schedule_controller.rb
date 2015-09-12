@@ -2,10 +2,11 @@ class ScheduleController < ApplicationController
   
 
   def home
+    redirect to '/'
   end
 
   def index
-    @schedules = schedule.all
+    @schedules = Schedule.all
   end
 
    def new
@@ -13,11 +14,11 @@ class ScheduleController < ApplicationController
   end
 
    def create
-    schedule =schedule.create(params.require(:name)
-    if article.save
+    schedule =schedule.create(params.require(:date))
+    if schedule.save
       flash[:notice] = "Article created successfully"
       redirect_to schedule
-    else
+    elsif
       flash[:error] = "#{schedule.errors}"
       redirect to "/schedule/#{schedule[:id]}"
     else
@@ -38,9 +39,7 @@ class ScheduleController < ApplicationController
     # update is similar to create
     schedule = schedule.find(params[:id])
     
-    if 
-    else
-    end
+    
   
   end
 

@@ -1,6 +1,7 @@
 class CustomerController < ApplicationController
  
  def home
+  redirect to '/'
   end
 
   def index
