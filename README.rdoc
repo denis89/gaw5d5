@@ -26,3 +26,15 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+This a Booking website, where customers can book a service like a technician, haircut etc.
+
+3 models: customer, technician, schedule(availability of the service)
+
+A customer can have many schedules to choose from.
+Besides he or she can have many technicians through schedule
+
+a schedule belongs to a customer and a technician
+
+a technician can have a schedule
+Besides he or she can have many customers through schedule
