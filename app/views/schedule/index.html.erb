@@ -1,2 +1,18 @@
-<h1>  
-</h1>
+<h1>schedule</h1>
+<%= link_to 'booking', controller: 'schedule' %>
+ 
+<%= link_to 'New Schedule' %> 
+<table>
+  <tr>
+    <th>Date</th>
+    
+  </tr>
+ 
+  <% @schedules.each do |schedule| %>
+    <tr>
+      <td><%= schedule.name %></td>
+      <td><%= schedule.date %></td>
+      <td><%= schedule.phoneno %></td>
+    </tr>
+  <% end %>
+</table>

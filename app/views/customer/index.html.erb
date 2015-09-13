@@ -1,1 +1,19 @@
-<h1> Hello </h1>
+<h1>Hello Customer!</h1>
+<%= link_to 'booking', controller: 'customer' %>
+ 
+<%= link_to 'New customer', new_customer_path %> 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Phoneno</th>
+  </tr>
+ 
+  <% @customers.each do |Customer| %>
+    <tr>
+      <td><%= customer.name %></td>
+      <td><%= customer.date %></td>
+      <td><%= customer.phoneno %></td>
+    </tr>
+  <% end %>
+</table>

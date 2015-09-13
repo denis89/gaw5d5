@@ -1,0 +1,12 @@
+<%= form_for @schedule do |form| %>
+  
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.text_field :date %>
+  </div>
+  
+  <div class="action">
+    <%= form.submit 'New schedule' %>
+  </div>
+
+<% end %>
